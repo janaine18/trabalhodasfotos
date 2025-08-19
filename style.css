@@ -1,53 +1,64 @@
-/* Container da galeria com grid para organizar fotos */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 15px;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border-radius: 10px;
+/* Estilo geral da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #37d67a;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
 }
 
-/* Título centralizado */
+/* Título principal */
 h1 {
-  text-align: center;
-  font-family: Arial, sans-serif;
-  margin-top: 20px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px #1e6f45;
 }
 
-/* Cada foto começa GRANDE */
-.photo {
+/* Container da galeria */
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Espaçamento entre os alunos */
+}
+
+/* Cada item (aluno) */
+.aluno {
+  background-color: #ffffff20;
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  transition: transform 0.3s;
   cursor: pointer;
-  border: 3px solid #007bff;
-  border-radius: 8px;
-  width: 300px;
-  height: 400px;
+}
+
+/* Imagem dos alunos */
+.aluno img {
+  width: 100%;
+  height: 250px;
   object-fit: cover;
-  display: block;
-  margin: 0 auto;
-  transition: all 0.3s ease;
+  border-radius: 10px;
+  transition: transform 0.3s;
 }
 
-/* Ao clicar, a foto fica PEQUENA */
-.photo.small {
-  width: 120px;
-  height: 160px;
-  border-color: #ccc;
-}
-
-/* Nome do aluno centralizado embaixo da foto */
-.caption {
-  text-align: center;
-  font-family: Arial, sans-serif;
+/* Nome do aluno */
+.aluno p {
+  color: #fff;
   font-weight: bold;
-  margin-top: 8px;
-  color: #333;
+  margin-top: 10px;
 }
 
-/* Container de cada item da galeria */
-.item {
-  text-align: center;
+/* Ao clicar na imagem, ela diminui */
+.aluno:active img {
+  transform: scale(0.8);
 }
+
+/* Efeito ao passar o mouse */
+.aluno:hover {
+  transform: scale(1.05);
+  background-color: #ffffff30;
+}
+
+
+
 
