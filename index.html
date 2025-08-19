@@ -1,67 +1,17 @@
-
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Galeria de Fotos da Turma - 25 Alunos</title>
-  <style>
-    /* Container da galeria: usa grid para organizar as fotos */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 15px;
-      max-width: 900px;
-      margin: 20px auto;
-      padding: 10px;
-      background-color: #f5f5f5;
-      border-radius: 10px;
-    }
-
-    /* Cada foto começa GRANDE por padrão */
-    .photo {
-      cursor: pointer;
-      border: 3px solid #007bff;
-      border-radius: 8px;
-      width: 300px;
-      height: 400px;
-      object-fit: cover;
-      display: block;
-      margin: 0 auto;
-      transition: all 0.3s ease;
-    }
-
-    /* Quando clicada, a foto fica PEQUENA (toggle) */
-    .photo.small {
-      width: 120px;
-      height: 160px;
-      border-color: #ccc;
-    }
-
-    /* Nome do aluno centralizado embaixo da foto */
-    .caption {
-      text-align: center;
-      font-family: Arial, sans-serif;
-      font-weight: bold;
-      margin-top: 8px;
-      color: #333;
-    }
-
-    /* Container de cada aluno (foto + nome) */
-    .item {
-      text-align: center;
-    }
-  </style>
+  <!-- Link para o CSS externo -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <h1 style="text-align:center; font-family: Arial, sans-serif;">
-    Galeria de Fotos da Turma - Ordem de Chamada
-  </h1>
+  <h1>Galeria de Fotos da Turma - Ordem de Chamada</h1>
 
   <div class="gallery">
-    <!-- Cada aluno: div com foto e legenda -->
-    <!-- Começa com foto GRANDE (sem a classe 'small') -->
     <div class="item">
       <img src="https://i.pravatar.cc/300?img=1" alt="Aluno 1" class="photo" />
       <div class="caption">Aluno 1 - Ana</div>
@@ -123,4 +73,58 @@
       <div class="caption">Aluno 15 - Otávio</div>
     </div>
     <div class="item">
-      <img src="https://i.pravatar.cc/300?img=16" alt="Al
+      <img src="https://i.pravatar.cc/300?img=16" alt="Aluno 16" class="photo" />
+      <div class="caption">Aluno 16 - Patrícia</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=17" alt="Aluno 17" class="photo" />
+      <div class="caption">Aluno 17 - Quésia</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=18" alt="Aluno 18" class="photo" />
+      <div class="caption">Aluno 18 - Rafael</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=19" alt="Aluno 19" class="photo" />
+      <div class="caption">Aluno 19 - Sabrina</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=20" alt="Aluno 20" class="photo" />
+      <div class="caption">Aluno 20 - Tiago</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=21" alt="Aluno 21" class="photo" />
+      <div class="caption">Aluno 21 - Úrsula</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=22" alt="Aluno 22" class="photo" />
+      <div class="caption">Aluno 22 - Vinícius</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=23" alt="Aluno 23" class="photo" />
+      <div class="caption">Aluno 23 - Wesley</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=24" alt="Aluno 24" class="photo" />
+      <div class="caption">Aluno 24 - Xênia</div>
+    </div>
+    <div class="item">
+      <img src="https://i.pravatar.cc/300?img=25" alt="Aluno 25" class="photo" />
+      <div class="caption">Aluno 25 - Yago</div>
+    </div>
+  </div>
+
+  <script>
+    // Seleciona todas as imagens da galeria
+    const photos = document.querySelectorAll('.photo');
+
+    photos.forEach(photo => {
+      photo.addEventListener('click', () => {
+        // Alterna a classe 'small' para fazer toggle do tamanho da foto
+        photo.classList.toggle('small');
+      });
+    });
+  </script>
+
+</body>
+</html>
