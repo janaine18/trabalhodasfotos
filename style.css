@@ -96,3 +96,38 @@ h1 {
   cursor: pointer;
 }
 
+/* Modal de imagem */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Imagem no modal */
+.modal-conteudo {
+  display: block;
+  margin: auto;
+  margin-top: 5%;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #fff;
+}
+
+/* Botão de fechar (X) */
+.fechar {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
