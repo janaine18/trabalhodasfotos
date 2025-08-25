@@ -1,133 +1,96 @@
 /* Estilo geral da página */
 body {
-  font-family: Arial, sans-serif;
-  background-color:#ac37d6;
-  margin: 0;
-  padding: 20px;
-  text-align: center;
-  color: #fff;
+  font-family: Arial, sans-serif;     /* Define a fonte usada no corpo da página */
+  background-color: #ac37d6;          /* Cor de fundo da página: roxo */
+  margin: 0;                          /* Remove as margens padrão do navegador */
+  padding: 20px;                      /* Espaço interno ao redor do conteúdo */
+  text-align: center;                 /* Centraliza o texto horizontalmente */
+  color: #fff;                        /* Cor do texto: branco */
 }
 
-/* Título principal */
+/* Estilo do título principal */
 h1 {
-  margin-bottom: 30px;
-  text-shadow: 2px 2px #1e6f45;
+  margin-bottom: 30px;               /* Espaço abaixo do título */
+  text-shadow: 2px 2px #1e6f45;      /* Sombra verde escura atrás do texto */
 }
 
 /* Container da galeria */
 .galeria {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px; /* Espaçamento entre os alunos */
+  display: flex;                     /* Usa Flexbox para organizar os itens */
+  flex-wrap: wrap;                  /* Permite quebrar os itens em várias linhas */
+  justify-content: center;          /* Centraliza os itens horizontalmente */
+  gap: 20px;                         /* Espaço entre os itens */
 }
 
-/* Cada item (aluno) */
+/* Cada item de aluno */
 .aluno {
-  background-color: #ffffff20;
-  border-radius: 10px;
-  padding: 10px;
-  width: 200px;
-  transition: transform 0.3s;
-  cursor: pointer;
+  background-color: #ffffff20;       /* Fundo branco com transparência (hexadecimal com alpha) */
+  border-radius: 10px;               /* Bordas arredondadas */
+  padding: 10px;                     /* Espaço interno */
+  width: 200px;                      /* Largura fixa do card */
+  transition: transform 0.3s;        /* Suaviza a transformação de escala */
+  cursor: pointer;                   /* Mostra o cursor de "mão" ao passar por cima */
 }
 
-/* Imagem dos alunos */
+/* Estilo da imagem dos alunos */
 .aluno img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.3s;
+  width: 100%;                       /* Imagem ocupa toda a largura do card */
+  height: 250px;                     /* Altura fixa da imagem */
+  object-fit: cover;                 /* Corta e ajusta a imagem sem deformar */
+  border-radius: 10px;              /* Bordas arredondadas na imagem */
+  transition: transform 0.3s;        /* Suaviza animações de transformação */
 }
 
 /* Nome do aluno */
 .aluno p {
-  color: #fff;
-  font-weight: bold;
-  margin-top: 10px;
+  color: #fff;                       /* Cor do texto: branco */
+  font-weight: bold;                /* Negrito */
+  margin-top: 10px;                 /* Espaço acima do nome */
 }
 
-/* Ao clicar na imagem, ela diminui */
+/* Efeito ao clicar (pressionar) na imagem */
 .aluno:active img {
-  transform: scale(0.8);
+  transform: scale(0.8);            /* Diminui a imagem para 80% ao clicar */
 }
 
-/* Efeito ao passar o mouse */
+/* Efeito ao passar o mouse sobre o card */
 .aluno:hover {
-  transform: scale(1.05);
-  background-color: #ffffff30;
+  transform: scale(1.05);           /* Aumenta levemente o card */
+  background-color: #ffffff30;      /* Clareia o fundo ao passar o mouse */
 }
 
-
-
-/* Estilo do modal (fundo escuro) */
+/* Modal (janela que aparece com a imagem ampliada) */
 .modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  padding-top: 50px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
+  display: none;                    /* Inicialmente escondido */
+  position: fixed;                  /* Fica fixo na tela mesmo ao rolar */
+  z-index: 999;                     /* Fica acima de todos os outros elementos */
+  padding-top: 50px;                /* Espaço acima da imagem */
+  left: 0;                          /* Começa do lado esquerdo da tela */
+  top: 0;                           /* Começa do topo da tela */
+  width: 100%;                      /* Ocupa toda a largura da tela */
+  height: 100%;                     /* Ocupa toda a altura da tela */
+  overflow: auto;                   /* Adiciona rolagem se necessário */
+  background-color: rgba(0,0,0,0.8); /* Fundo preto semi-transparente */
 }
 
-/* Imagem ampliada */
+/* Imagem ampliada dentro do modal */
 .modal-conteudo {
-  margin: auto;
-  display: block;
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #fff;
+  margin: auto;                     /* Centraliza horizontalmente */
+  display: block;                   /* Mostra como bloco */
+  margin-top: 5%;                   /* Espaço superior */
+  max-width: 90%;                   /* Largura máxima da imagem */
+  max-height: 90%;                  /* Altura máxima da imagem */
+  border-radius: 10px;              /* Bordas arredondadas */
+  box-shadow: 0 0 20px #fff;        /* Sombra branca ao redor da imagem */
 }
 
-/* Botão fechar */
+/* Botão de fechar (X) no canto superior direito */
 .fechar {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #ffffff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
+  position: absolute;              /* Posicionamento absoluto dentro do modal */
+  top: 20px;                       /* Distância do topo */
+  right: 35px;                     /* Distância da direita */
+  color: white;                    /* Cor do X: branco */
+  font-size: 40px;                 /* Tamanho grande */
+  font-weight: bold;              /* Negrito */
+  cursor: pointer;                /* Mostra o cursor de mão ao passar por cima */
 }
-
-/* Modal de imagem */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Imagem no modal */
-.modal-conteudo {
-  display: block;
-  margin: auto;
-  margin-top: 5%;
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #fff;
-}
-
-/* Botão de fechar (X) */
-.fechar {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
